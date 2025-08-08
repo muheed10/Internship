@@ -30,6 +30,7 @@ public class FanDemo {
                 System.out.println("5-Fan selected");
                 System.out.println("6-quit");
                 System.out.println("7-show fan status summary");
+                System.out.println("8-Enter fan number to check status:");
                 int choice = sc.nextInt();
                 switch (choice) {
                     case 1 -> {
@@ -53,11 +54,11 @@ public class FanDemo {
                     }
                     case 3 -> {
                         f.increace();
-                        System.out.println("Fan speed is: " + f1.getSpeed());
+                        System.out.println("Fan speed is: " + f.getSpeed());
                     }
                     case 4 -> {
                         f.decrease();
-                        System.out.println("Fan speed is: " + f1.getSpeed());
+                        System.out.println("Fan speed is: " + f.getSpeed());
                     }
 
                     case 5 -> {
@@ -85,6 +86,7 @@ public class FanDemo {
                         System.out.println("Fans OFF : " + offCount);
                     }
                     case 8 ->{
+                        running=false;
                         System.out.println("Enter fan number to check status:");
                         int fanNum = sc.nextInt();
 
